@@ -15,13 +15,13 @@ def maxArea(heights):
     left_idx = 0
     right_idx = len(heights) - 1
     
-    maxArea = 0
+    max_area = 0
     while left_idx < right_idx:
         current_area = calculateArea(left_idx, right_idx, heights)
-        if current_area > maxArea:
-            maxArea = current_area
+        if current_area > max_area:
+            max_area = current_area
         left_idx, right_idx = incrementSmallerIdx(left_idx, right_idx, heights)
-    return maxArea
+    return max_area
     
 test_set1 = [1,3,2,4,5]
 expected_output1 = 9
